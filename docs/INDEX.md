@@ -3,7 +3,7 @@
 > **GERADO AUTOMATICAMENTE.** Edição manual PROIBIDA.
 > Regenerado por `scripts/generate-index.sh` a cada push na `main`.
 >
-> Última regeneração: 2026-06-09 12:45 (commit `74c9b6f`)
+> Última regeneração: 2026-06-09 13:03 (commit `f330592`)
 
 ---
 
@@ -172,6 +172,20 @@
     - erp-front/src/services/supplierCustomerService.ts
     - erp-front/src/pages/supplier-customers/
 - → [features/fornecedores-clientes.md](features/fornecedores-clientes.md)
+
+### jornada-trabalho
+
+- **Keywords:** jornada, escala, work-schedule, minutos previstos, intervalo, horas por dia, ponto
+- **Resumo:** Cadastro de jornadas de trabalho (escalas) com minutos por dia da semana + intervalo, vinculável ao contrato do empregado. O ponto calcula os minutos previstos do dia a partir da jornada do contrato ativo.
+- **Arquivos principais:**
+    - erp-back/-1-Domain/Entities/workSchedule.cs
+    - erp-back/-4-WebApi/Controllers/WorkScheduleController.cs
+    - erp-back/-2-Application/Services/WorkScheduleService.cs
+    - erp-back/-2-Application/Services/TimeClockService.cs (GetExpectedDailyMinutes)
+    - erp-back/-1-Domain/database/migrations/027_create_work_schedule.sql
+    - erp-front/src/services/workScheduleService.ts
+    - erp-front/src/pages/work-schedules/
+- → [features/jornada-trabalho.md](features/jornada-trabalho.md)
 
 ### justificativas
 

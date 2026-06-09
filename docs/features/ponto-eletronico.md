@@ -19,6 +19,7 @@
 | ID | Data | Commit | Título |
 |---|---|---|---|
 | SPEC-20260609-1111 | 2026-06-09 | `bc93f49` | Onda 0: gating de local por empregado (EmployeeAllowedLocation ativo) + correções do dashboard (respeita a data; MinutesExpected da config, não 480 fixo) |
+| SPEC-20260609-1248 | 2026-06-09 | `d9100bd` | Onda 2: minutos previstos (`GetExpectedDailyMinutes`) passam a vir da jornada do contrato ativo (minutos do dia − intervalo); fallback config÷5 → 480. Ver [jornada-trabalho](jornada-trabalho.md) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |
