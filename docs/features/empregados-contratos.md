@@ -19,7 +19,7 @@
 ### Concluídas
 | ID | Data | Commit | Título |
 |---|---|---|---|
-| — | — | — | _(nenhuma SPEC ainda — feature documentada por engenharia reversa do estado atual)_ |
+| SPEC-20260609-1212 | 2026-06-09 | `4c8793b` | Onda 1: dados bancários/PIX no contrato (chave PIX, banco, agência, conta, operação) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

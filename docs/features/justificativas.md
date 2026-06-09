@@ -15,6 +15,7 @@
 | ID | Data | Commit | Título |
 |---|---|---|---|
 | SPEC-20260609-1111 | 2026-06-09 | `c803479` | Onda 0: endpoint `reject` + tela de gestor aprovar/rejeitar/abonar (Absences) |
+| SPEC-20260609-1212 | 2026-06-09 | `4ef7c66` | Onda 1: anexo de justificativa (upload Base64 + visualização) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

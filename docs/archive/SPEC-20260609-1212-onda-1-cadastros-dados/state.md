@@ -65,3 +65,9 @@ Onda 1 ativada (programa 2/7, depende de SPEC-20260609-1111 já concluída/merge
 ## 2026-06-09 12:14 — [MARCO] Item F concluído
 
 `023_add_contract_payment_info.sql` aplicado na Railway (6 colunas nullable em tb_contract) + `erp.sql` atualizado (via node, sem mexer no alinhamento). Backend: entidade `Contract` (+6 props), `ContractInputDTO`/`ContractOutputDTO`, `ContractMapper` (ToEntity/UpdateEntity/ToOutputDTO). Frontend: `contractService` (interfaces Contract+ContractInput), `ContractForm` (seção "Dados bancários / PIX": tipo de chave, chave, banco, agência, conta, operação). `dotnet build` 0 erros; `npm run build` ✓ built. A commitar.
+
+## 2026-06-09 12:40 — [conclusão] Onda 1 concluída e arquivada
+
+Todos os critérios F,G,H,I marcados. Migrações 023 (bancário/PIX), 024 (feriados), 025 (plano de contas + FKs) e 026 (widen attachment p/ Base64) aplicadas na Railway + `erp.sql` atualizado. Features tocadas atualizadas (R.7): empregados-contratos (bancário/PIX), justificativas (anexo), feriados (nova), plano-de-contas (nova). Commits — F `4c8793b`/`361fc4a`, G `a71fb83`/`a4c9df4`, H `0be4661`/`31e0f24`, I `4ef7c66`/`70a9e67`. `main.md` Status: done; Commit final erp-back `4ef7c66` / erp-front `70a9e67`. Pasta movida `active/`→`archive/`. Merge `feature/onda-1-cadastros-dados`→main LOCAL em erp-back e erp-front (sem push).
+
+**Entregue na Onda 1:** dados bancários/PIX no contrato; cadastro de feriados; plano de contas (categorias Receita/Despesa) + categorização de títulos; anexo de imagem (atestado) na justificativa com compressão e visualização.

@@ -3,7 +3,7 @@
 > **GERADO AUTOMATICAMENTE.** Edição manual PROIBIDA.
 > Regenerado por `scripts/generate-index.sh` a cada push na `main`.
 >
-> Última regeneração: 2026-06-09 12:07 (commit `24e71e2`)
+> Última regeneração: 2026-06-09 12:45 (commit `74c9b6f`)
 
 ---
 
@@ -132,6 +132,19 @@
     - erp-front/src/pages/loan-advances/
 - → [features/emprestimos-adiantamentos.md](features/emprestimos-adiantamentos.md)
 
+### feriados
+
+- **Keywords:** feriado, holiday, calendário, dia útil, recorrente, anual
+- **Resumo:** Cadastro de feriados por empresa (descrição, data, recorrente/anual). Base para futuras regras de dia útil / jornada / folha.
+- **Arquivos principais:**
+    - erp-back/-1-Domain/Entities/holiday.cs
+    - erp-back/-4-WebApi/Controllers/HolidayController.cs
+    - erp-back/-2-Application/Services/HolidayService.cs
+    - erp-back/-1-Domain/database/migrations/024_create_holiday.sql
+    - erp-front/src/services/holidayService.ts
+    - erp-front/src/pages/holidays/
+- → [features/feriados.md](features/feriados.md)
+
 ### folha-pagamento
 
 - **Keywords:** folha, payroll, salário, holerite, inss, fgts, irrf, décimo terceiro, férias, fechamento, snapshot, recalcular
@@ -184,6 +197,19 @@
     - erp-front/src/services/purchaseOrderService.ts
     - erp-front/src/pages/purchase-orders/
 - → [features/ordens-de-compra.md](features/ordens-de-compra.md)
+
+### plano-de-contas
+
+- **Keywords:** plano de contas, categoria, receita, despesa, financial-category, dre
+- **Resumo:** Categorização contábil (plano de contas) de Receita/Despesa, vinculável a títulos a pagar/receber (e, futuramente, transações), habilitando relatórios por categoria.
+- **Arquivos principais:**
+    - erp-back/-1-Domain/Entities/financialCategory.cs
+    - erp-back/-4-WebApi/Controllers/FinancialCategoryController.cs
+    - erp-back/-2-Application/Services/FinancialCategoryService.cs
+    - erp-back/-1-Domain/database/migrations/025_create_financial_category.sql
+    - erp-front/src/services/financialCategoryService.ts
+    - erp-front/src/pages/financial-categories/
+- → [features/plano-de-contas.md](features/plano-de-contas.md)
 
 ### plataforma-core
 

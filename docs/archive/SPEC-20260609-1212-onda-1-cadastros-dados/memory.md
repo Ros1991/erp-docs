@@ -8,12 +8,12 @@
 
 ## TL;DR (sobrescrever ao fim de cada sessão)
 
-**Última atualização:** 2026-06-09 12:14 (sessão #1)
-**Onde tô:** Onda 1 — item F (bancário/PIX no contrato) concluído; falta G/H/I.
-**Próximo passo:** G feriados → H plano de contas → I anexo de justificativa → fechar onda.
-**Última decisão:** migrações aplicadas via `node .migrate/apply.js`; só aditivas; reusar attachment_url p/ Base64 no item I.
+**Última atualização:** 2026-06-09 12:40 (sessão #1)
+**Onde tô:** **SPEC CONCLUÍDA** — Onda 1 (F,G,H,I) implementada e arquivada; merge na main LOCAL de erp-back/erp-front. Migrações 023-026 aplicadas na Railway.
+**Próximo passo:** Onda 2 — Jornada/WorkSchedule (destrava o previsto real do ponto).
+**Última decisão:** anexo de justificativa via Base64 comprimido em `attachment_url` (coluna widened p/ text); plano de contas reusa permissões `accountPayableReceivable.*`.
 **Bloqueio atual:** nenhum.
-**Se retomar, ler:** state.md (fatos confirmados + log).
+**Se retomar, ler:** main.md (critérios) + state.md [conclusão].
 
 ---
 
