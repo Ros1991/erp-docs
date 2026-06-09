@@ -3,7 +3,7 @@
 > **GERADO AUTOMATICAMENTE.** Edição manual PROIBIDA.
 > Regenerado por `scripts/generate-index.sh` a cada push na `main`.
 >
-> Última regeneração: 2026-06-09 13:03 (commit `f330592`)
+> Última regeneração: 2026-06-09 13:31 (commit `d67abf7`)
 
 ---
 
@@ -25,6 +25,20 @@
     - erp-front/src/contexts/AuthContext.tsx
     - erp-front/src/pages/auth/
 - → [features/auth.md](features/auth.md)
+
+### banco-de-horas
+
+- **Keywords:** banco de horas, saldo de horas, hora extra, acerto, lançamento manual, crédito, débito, espelho de ponto
+- **Resumo:** Saldo de horas (banco de horas) por empregado, formado por lançamentos manuais assinados (crédito/débito/acerto) e visualizado no espelho de ponto junto ao saldo computado do período.
+- **Arquivos principais:**
+    - erp-back/-1-Domain/Entities/timeBankAdjustment.cs
+    - erp-back/-4-WebApi/Controllers/TimeBankAdjustmentController.cs
+    - erp-back/-2-Application/Services/TimeBankAdjustmentService.cs
+    - erp-back/-2-Application/Services/TimeClockService.cs (GetTimeMirrorAsync / GetPeriodSummaryAsync)
+    - erp-back/-1-Domain/database/migrations/028_create_time_bank_adjustment.sql
+    - erp-front/src/services/timeBankAdjustmentService.ts
+    - erp-front/src/pages/time-clock/TimeMirror.tsx
+- → [features/banco-de-horas.md](features/banco-de-horas.md)
 
 ### cargos-permissoes
 

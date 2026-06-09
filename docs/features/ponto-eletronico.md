@@ -20,6 +20,7 @@
 |---|---|---|---|
 | SPEC-20260609-1111 | 2026-06-09 | `bc93f49` | Onda 0: gating de local por empregado (EmployeeAllowedLocation ativo) + correções do dashboard (respeita a data; MinutesExpected da config, não 480 fixo) |
 | SPEC-20260609-1248 | 2026-06-09 | `d9100bd` | Onda 2: minutos previstos (`GetExpectedDailyMinutes`) passam a vir da jornada do contrato ativo (minutos do dia − intervalo); fallback config÷5 → 480. Ver [jornada-trabalho](jornada-trabalho.md) |
+| SPEC-20260609-1309 | 2026-06-09 | `a9edd34` | Onda 3: espelho de ponto (`mirror`) + resumo do período (`period-summary`) + banco de horas. Helpers de cálculo reusados + guarda multi-tenant. Ver [banco-de-horas](banco-de-horas.md) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

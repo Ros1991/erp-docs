@@ -17,6 +17,7 @@
 | ID | Data | Commit | Título |
 |---|---|---|---|
 | SPEC-20260609-1248 | 2026-06-09 | `d9100bd` | Onda 2: WorkSchedule (entidade + CRUD api/work-schedule + UI) + FK no contrato + destrave dos minutos previstos do ponto |
+| SPEC-20260609-1309 | 2026-06-09 | `a9edd34` | Onda 3 (consumo): a jornada alimenta o previsto no espelho de ponto/resumo do período. Ver [banco-de-horas](banco-de-horas.md) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |
