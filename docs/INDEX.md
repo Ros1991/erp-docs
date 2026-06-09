@@ -3,7 +3,7 @@
 > **GERADO AUTOMATICAMENTE.** Edição manual PROIBIDA.
 > Regenerado por `scripts/generate-index.sh` a cada push na `main`.
 >
-> Última regeneração: 2026-06-09 15:35 (commit `060c556`)
+> Última regeneração: 2026-06-09 15:55 (commit `5493aad`)
 
 ---
 
@@ -228,6 +228,19 @@
     - erp-back/-1-Domain/Entities/justification.cs
     - erp-front/src/pages/time-clock/Absences.tsx
 - → [features/justificativas.md](features/justificativas.md)
+
+### notificacoes
+
+- **Keywords:** notificação, sino, header, alerta, lida, não lida, pendência
+- **Resumo:** Módulo de notificações por usuário (sino no header com contador e dropdown), com marcar lida/todas e endpoint de criação para gatilhos do sistema.
+- **Arquivos principais:**
+    - erp-back/-1-Domain/Entities/notification.cs
+    - erp-back/-4-WebApi/Controllers/NotificationController.cs
+    - erp-back/-2-Application/Services/NotificationService.cs
+    - erp-back/-1-Domain/database/migrations/031_onda6_final.sql
+    - erp-front/src/components/layout/NotificationBell.tsx
+    - erp-front/src/services/notificationService.ts
+- → [features/notificacoes.md](features/notificacoes.md)
 
 ### ordens-de-compra
 

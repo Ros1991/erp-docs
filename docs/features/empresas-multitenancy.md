@@ -19,7 +19,7 @@
 ### Concluídas
 | ID | Data | Commit | Título |
 |---|---|---|---|
-| — | — | — | _(nenhuma SPEC ainda — feature documentada por engenharia reversa do estado atual)_ |
+| SPEC-20260609-1538 | 2026-06-09 | `385b415` | Onda 6: desligamento/desativação de empregado — `CompanyUser.is_active` (soft-delete) + redireciona tarefas em aberto e subordinados antes de remover o acesso (`POST api/employee/{id}/deactivate`) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

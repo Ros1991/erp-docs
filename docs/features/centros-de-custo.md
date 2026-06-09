@@ -17,7 +17,7 @@
 ### Concluídas
 | ID | Data | Commit | Título |
 |---|---|---|---|
-| — | — | — | _(nenhuma SPEC ainda — feature documentada por engenharia reversa do estado atual; é o exemplo de referência do padrão CRUD canônico)_ |
+| SPEC-20260609-1538 | 2026-06-09 | `385b415` | Onda 6: template de rateio nomeado (`CostCenterAllocationTemplate` + linhas) — conjuntos reutilizáveis de centro de custo + % (valida soma 100%); `api/cost-center-allocation-template` |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |
