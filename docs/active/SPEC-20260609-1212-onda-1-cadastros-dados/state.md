@@ -23,8 +23,8 @@
 
 | # | Descrição | Status | Atualizado | Commit |
 |---|-----------|--------|-----------|--------|
-| F | Dados bancários/PIX no contrato | concluído | 2026-06-09 12:14 | (a commitar) |
-| G | Feriados (entidade + CRUD + UI) | pendente | 2026-06-09 12:14 | — |
+| F | Dados bancários/PIX no contrato | concluído | 2026-06-09 12:14 | `4c8793b`/`361fc4a` |
+| G | Feriados (entidade + CRUD + UI) | concluído | 2026-06-09 12:20 | `a71fb83`/`a4c9df4` |
 | H | Plano de contas (FinancialCategory + FK + seletor) | pendente | 2026-06-09 12:14 | — |
 | I | Anexo de justificativa (Base64) | pendente | 2026-06-09 12:14 | — |
 
