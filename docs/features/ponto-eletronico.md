@@ -18,7 +18,7 @@
 ### Concluídas
 | ID | Data | Commit | Título |
 |---|---|---|---|
-| — | — | — | _(nenhuma SPEC ainda — feature documentada por engenharia reversa do estado atual)_ |
+| SPEC-20260609-1111 | 2026-06-09 | `bc93f49` | Onda 0: gating de local por empregado (EmployeeAllowedLocation ativo) + correções do dashboard (respeita a data; MinutesExpected da config, não 480 fixo) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

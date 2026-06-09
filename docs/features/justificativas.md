@@ -14,7 +14,7 @@
 ### Concluídas
 | ID | Data | Commit | Título |
 |---|---|---|---|
-| — | — | — | _(nenhuma SPEC ainda — feature documentada por engenharia reversa do estado atual)_ |
+| SPEC-20260609-1111 | 2026-06-09 | `c803479` | Onda 0: endpoint `reject` + tela de gestor aprovar/rejeitar/abonar (Absences) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

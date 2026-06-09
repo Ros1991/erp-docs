@@ -21,7 +21,7 @@
 ### Concluídas
 | ID | Data | Commit | Título |
 |---|---|---|---|
-| — | — | — | _(nenhuma SPEC ainda — feature documentada por engenharia reversa do estado atual)_ |
+| SPEC-20260609-1111 | 2026-06-09 | `780660e` | Onda 0: confirmação ao Sair (Header) + persistência do estado da sidebar (localStorage) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

@@ -15,7 +15,7 @@
 ### Concluídas
 | ID | Data | Commit | Título |
 |---|---|---|---|
-| — | — | — | _(nenhuma SPEC ainda — feature documentada por engenharia reversa do estado atual)_ |
+| SPEC-20260609-1111 | 2026-06-09 | `a4dd879` | Onda 0: bloqueio de editar/excluir empréstimo/adiantamento com parcela já paga (`InstallmentsPaid>0`) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |
