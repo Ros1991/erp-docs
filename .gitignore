@@ -21,3 +21,6 @@ docs/active/**/tmp/
 .DS_Store
 Thumbs.db
 *.swp
+
+# Runner de migração local (node-pg) — não versionar (tem node_modules; lê o segredo do launch.json em runtime)
+/.migrate/
