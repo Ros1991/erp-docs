@@ -16,6 +16,7 @@
 | ID | Data | Commit | Título |
 |---|---|---|---|
 | SPEC-20260609-1111 | 2026-06-09 | `a4dd879` | Onda 0: bloqueio de editar/excluir empréstimo/adiantamento com parcela já paga (`InstallmentsPaid>0`) |
+| SPEC-20260609-1516 | 2026-06-09 | `34f5246` | Onda 5: resumo de dívida por empregado (buckets Mês/13º/Férias via `DiscountSource` + % do salário comprometido + alerta) — `GET api/loan-advance/employee/{id}/summary` |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

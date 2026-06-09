@@ -3,11 +3,27 @@
 > **GERADO AUTOMATICAMENTE.** Edição manual PROIBIDA.
 > Regenerado por `scripts/generate-index.sh` a cada push na `main`.
 >
-> Última regeneração: 2026-06-09 15:13 (commit `1df8920`)
+> Última regeneração: 2026-06-09 15:35 (commit `060c556`)
 
 ---
 
 ## Features
+
+### abonos-ferias
+
+- **Keywords:** abono, dias, horas, férias, período aquisitivo, gozo, vacation, Empregados_Abonos
+- **Resumo:** Cadastro de abonos (Dias/Horas) e de períodos de férias (aquisitivo + gozo) por empregado — registros de RH portados do sistema antigo.
+- **Arquivos principais:**
+    - erp-back/-1-Domain/Entities/employeeAbono.cs
+    - erp-back/-1-Domain/Entities/vacationPeriod.cs
+    - erp-back/-4-WebApi/Controllers/EmployeeAbonoController.cs
+    - erp-back/-4-WebApi/Controllers/VacationPeriodController.cs
+    - erp-back/-2-Application/Services/EmployeeAbonoService.cs
+    - erp-back/-2-Application/Services/VacationPeriodService.cs
+    - erp-back/-1-Domain/database/migrations/030_onda5_pessoal.sql
+    - erp-front/src/pages/personnel/Abonos.tsx
+    - erp-front/src/pages/personnel/VacationPeriods.tsx
+- → [features/abonos-ferias.md](features/abonos-ferias.md)
 
 ### auth
 

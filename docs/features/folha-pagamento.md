@@ -17,7 +17,7 @@
 ### Concluídas
 | ID | Data | Commit | Título |
 |---|---|---|---|
-| — | — | — | _(nenhuma SPEC ainda — feature documentada por engenharia reversa do estado atual)_ |
+| SPEC-20260609-1516 | 2026-06-09 | `34f5246` | Onda 5: benefício percentual — a folha calcula `% × salário base` quando o benefício é marcado como percentual (aditivo, **default-off** preserva o cálculo existente) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

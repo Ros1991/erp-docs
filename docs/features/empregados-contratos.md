@@ -21,6 +21,7 @@
 |---|---|---|---|
 | SPEC-20260609-1212 | 2026-06-09 | `4c8793b` | Onda 1: dados bancários/PIX no contrato (chave PIX, banco, agência, conta, operação) |
 | SPEC-20260609-1248 | 2026-06-09 | `d9100bd` | Onda 2: vínculo de jornada (`work_schedule_id`) no contrato + seletor de jornada no ContractForm. Ver [jornada-trabalho](jornada-trabalho.md) |
+| SPEC-20260609-1516 | 2026-06-09 | `34f5246` | Onda 5: benefício do contrato como **percentual do salário** (`IsPercentage`/`Percentage`) + UI no BenefitDiscountList. Ver [folha-pagamento](folha-pagamento.md) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |
