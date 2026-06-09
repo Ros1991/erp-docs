@@ -1,0 +1,52 @@
+name: Docs — Lint & Audit
+
+# Valida o formato dos docs (lint) em PRs e pushes na main, aplica o gate R.7
+# (features atualizadas ao arquivar SPEC) nos PRs, e roda a auditoria periódica
+# (semanal) conforme docs/RULES.md §7.3.
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  schedule:
+    - cron: '0 6 * * 1'   # toda segunda 06:00 UTC — auditoria geral periódica
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-lint-audit-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Lint (formato dos docs)
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: scripts/lint-docs.sh
+        run: bash scripts/lint-docs.sh
+
+  audit-pr:
+    name: Audit — gate R.7 (PR)
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0          # base.sha + head.sha precisam estar no histórico
+      - name: scripts/audit-docs.sh --pr
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: bash scripts/audit-docs.sh --pr
+
+  audit-scheduled:
+    name: Audit — periódica (geral)
+    if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: scripts/audit-docs.sh
+        run: bash scripts/audit-docs.sh

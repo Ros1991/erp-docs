@@ -1,0 +1,23 @@
+# ==========================================================================
+#  erp-docs — repositório de documentação (SPEC-driven v3) do ERP "Meu Gestor".
+#  Vive na RAIZ do workspace, que também contém os repos de CÓDIGO erp-back e
+#  erp-front (cada um com seu próprio .git). Este .gitignore garante que o
+#  erp-docs NÃO engula os sub-repos nem versione segredos locais.
+# ==========================================================================
+
+# --- Repositórios de código aninhados (têm git próprio — NUNCA versionar aqui) ---
+/erp-back/
+/erp-front/
+
+# --- Segredos locais do VS Code ---
+#  launch.json embute a DATABASE_URL da Railway (usuário:senha em texto puro).
+#  NUNCA commitar. tasks.json/extensions.json são seguros e ficam versionados.
+.vscode/launch.json
+
+# --- SPEC-driven docs v3 — temporários por SPEC ativa (R.12) ---
+docs/active/**/tmp/
+
+# --- Lixo de SO / editor ---
+.DS_Store
+Thumbs.db
+*.swp

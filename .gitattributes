@@ -1,0 +1,8 @@
+# Normalização de fins de linha.
+# Os scripts shell DEVEM ter LF — rodam no CI (Ubuntu) via `bash scripts/*.sh`;
+# CRLF quebraria o shebang/parsing. Forçar LF também no working tree.
+*.sh    text eol=lf
+*.md    text eol=lf
+
+# Demais arquivos: normalizar para LF no repositório (checkout respeita a plataforma).
+*       text=auto
