@@ -13,6 +13,7 @@
 **Bloqueia:** —
 **Ordem no programa:** pós-programa (solicitado pelo usuário em 2026-06-11)
 **Origem:** usuário em 2026-06-11: "criar os módulos para configurar visualização nos cargos (Gerenciar tarefas é um módulo, Minhas tarefas é outro)" + "Minhas Tarefas mais dinâmico, tipo um quadro" + bug do header engolindo sidebar/conteúdo.
+**Resumo:** Catálogo de permissões granular por tela (8 módulos novos + migração de dados nos cargos + guarda de propriedade), Minhas Tarefas em quadro kanban com drag & drop, e correção do header que cobria o topo da sidebar/conteúdo.
 
 ## Objetivo
 
