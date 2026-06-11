@@ -19,7 +19,7 @@
 ### Concluídas
 | ID | Data | Commit | Título |
 |---|---|---|---|
-| — | — | — | _(nenhuma SPEC ainda — feature documentada por engenharia reversa do estado atual)_ |
+| SPEC-20260611-1317 | 2026-06-11 | — | Onda 9: **catálogo granular** — +8 módulos (`myTasks` canView/canExecute, `holiday`, `workSchedule`, `financialCategory`, `allocationTemplate`, `abono`, `vacation`, `timeBank`) + renames (`task`→"Gerenciar Tarefas", `costCenter`→"Atividades"). Migração 034 copia o acesso antigo→novo no JSONB dos cargos; controllers aceitam novo OU antigo; `myTasks.canExecute` tem guarda de propriedade (só as próprias tarefas) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |
