@@ -22,6 +22,7 @@
 | ID | Data | Commit | Título |
 |---|---|---|---|
 | SPEC-20260609-1111 | 2026-06-09 | `780660e` | Onda 0: confirmação ao Sair (Header) + persistência do estado da sidebar (localStorage) |
+| SPEC-20260611-1249 | 2026-06-11 | — | Onda 8: **Dashboard com dados reais** (funcionários, tarefas em aberto, receitas/despesas do mês, ponto hoje, minhas tarefas — permission-guarded; fakes removidos) + Header/Dashboard saúdam com o **apelido do empregado** associado |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

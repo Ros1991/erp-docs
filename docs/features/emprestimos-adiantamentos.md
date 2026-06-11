@@ -17,6 +17,7 @@
 |---|---|---|---|
 | SPEC-20260609-1111 | 2026-06-09 | `a4dd879` | Onda 0: bloqueio de editar/excluir empréstimo/adiantamento com parcela já paga (`InstallmentsPaid>0`) |
 | SPEC-20260609-1516 | 2026-06-09 | `34f5246` | Onda 5: resumo de dívida por empregado (buckets Mês/13º/Férias via `DiscountSource` + % do salário comprometido + alerta) — `GET api/loan-advance/employee/{id}/summary` |
+| SPEC-20260611-1249 | 2026-06-11 | — | Onda 8: tela em 2 níveis — **visão master por funcionário** (`GET api/loan-advance/employee-summaries`: dívida total + buckets + em aberto) → clique abre os empréstimos dele (filtro `EmployeeId`) → `+` na linha abre o form pré-selecionado (`?employeeId=`). Busca **case-insensitive** (ILIKE) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

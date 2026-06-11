@@ -15,7 +15,7 @@
 ### Concluídas
 | ID | Data | Commit | Título |
 |---|---|---|---|
-| — | — | — | _(nenhuma SPEC ainda — feature documentada por engenharia reversa do estado atual)_ |
+| SPEC-20260611-1249 | 2026-06-11 | — | Onda 8: lista de usuários mostra o **apelido do empregado associado** (`CompanyUserOutputDTO.EmployeeNickname`, lookup por `UserId` no service) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

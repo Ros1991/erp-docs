@@ -15,7 +15,7 @@
 ### Concluídas
 | ID | Data | Commit | Título |
 |---|---|---|---|
-| — | — | — | _(nenhuma SPEC ainda — feature documentada por engenharia reversa do estado atual)_ |
+| SPEC-20260611-1249 | 2026-06-11 | — | Onda 8: campo **WhatsApp** no fornecedor/cliente (migração 033 + entity/DTOs/mapper + PhoneInput no form) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

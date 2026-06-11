@@ -17,6 +17,7 @@
 |---|---|---|---|
 | SPEC-20260609-1212 | 2026-06-09 | `0be4661` | Onda 1: FinancialCategory + FK em conta a pagar/receber + seletor |
 | SPEC-20260611-1231 | 2026-06-11 | — | Onda 7: categoria ligada nas **transações financeiras** (a FK que era só-banco virou entity/DTO/UI) + **Relatório por Categoria** (consumo real do plano de contas). Ver [relatorios](relatorios.md) |
+| SPEC-20260611-1249 | 2026-06-11 | — | Onda 8: a transação gerada pelo **pagamento de um título herda a categoria** do título (a tela de transações é read-only; a categoria entra na geração) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

@@ -21,6 +21,7 @@
 |---|---|---|---|
 | SPEC-20260609-1334 | 2026-06-09 | `71bfe4b` | Onda 4: recorrência automática (gera próxima ocorrência), 1 tarefa ativa por empregado, editar hora manual, pausa geral |
 | SPEC-20260611-1231 | 2026-06-11 | — | Onda 7: gestão completa na edição (`TaskManagePanel`): funcionários com todas as ações, fotos (Base64 + galeria), comentários (endpoints novos); migração 032 (urls → text) |
+| SPEC-20260611-1249 | 2026-06-11 | — | Onda 8: prioridade default ao criar tarefa = **Baixa** |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |
