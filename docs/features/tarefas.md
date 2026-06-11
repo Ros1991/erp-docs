@@ -23,6 +23,7 @@
 | SPEC-20260611-1231 | 2026-06-11 | — | Onda 7: gestão completa na edição (`TaskManagePanel`): funcionários com todas as ações, fotos (Base64 + galeria), comentários (endpoints novos); migração 032 (urls → text) |
 | SPEC-20260611-1249 | 2026-06-11 | — | Onda 8: prioridade default ao criar tarefa = **Baixa** |
 | SPEC-20260611-1317 | 2026-06-11 | — | Onda 9: **Minhas Tarefas vira quadro kanban** (colunas A fazer/Em andamento/Pausada/Finalizada, drag & drop com transições mapeadas + 1-ativa, botões nos cards p/ mobile) + módulo próprio `myTasks` (canView/canExecute) separado de "Gerenciar Tarefas" (`task.*`), com guarda de propriedade no servidor |
+| SPEC-20260611-1317 | 2026-06-11 | `cf3e493` | (complemento) **modal de detalhes** ao clicar no card do quadro: descrição, datas/horas, responsáveis, fotos (galeria/câmera/lightbox) e comentários; endpoints de fotos/comentários aceitam `myTasks.*` |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |
