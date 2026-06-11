@@ -14,7 +14,7 @@
 ### Concluídas
 | ID | Data | Commit | Título |
 |---|---|---|---|
-| — | — | — | _(nenhuma SPEC ainda — feature documentada por engenharia reversa do estado atual)_ |
+| SPEC-20260611-1231 | 2026-06-11 | — | Onda 7: Relatório por Categoria (`GET api/report/category` + tela `/reports/category`) — títulos do período agrupados pelo plano de contas (pago/aberto/total, grupos Receita/Despesa/Sem categoria) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

@@ -16,7 +16,7 @@
 ### Concluídas
 | ID | Data | Commit | Título |
 |---|---|---|---|
-| — | — | — | _(nenhuma SPEC ainda — feature documentada por engenharia reversa do estado atual)_ |
+| SPEC-20260611-1231 | 2026-06-11 | — | Onda 7: categoria (plano de contas) na transação (`FinancialCategoryId` em entity/DTOs/mapper + dropdown no form) + "Aplicar template" de rateio no formulário (via componente compartilhado) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

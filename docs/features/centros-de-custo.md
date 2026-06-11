@@ -18,6 +18,7 @@
 | ID | Data | Commit | Título |
 |---|---|---|---|
 | SPEC-20260609-1538 | 2026-06-09 | `385b415` | Onda 6: template de rateio nomeado (`CostCenterAllocationTemplate` + linhas) — conjuntos reutilizáveis de centro de custo + % (valida soma 100%); `api/cost-center-allocation-template` |
+| SPEC-20260611-1231 | 2026-06-11 | — | Onda 7: **"Aplicar template"** no componente compartilhado `CostCenterDistribution` — 1 clique preenche o rateio em Contrato, Conta a Pagar/Receber, Empréstimo, Transação e Processar OC (fecha o gap "cadastro sem consumo" da Onda 6) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

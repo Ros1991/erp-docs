@@ -16,6 +16,7 @@
 | ID | Data | Commit | Título |
 |---|---|---|---|
 | SPEC-20260609-1212 | 2026-06-09 | `0be4661` | Onda 1: FinancialCategory + FK em conta a pagar/receber + seletor |
+| SPEC-20260611-1231 | 2026-06-11 | — | Onda 7: categoria ligada nas **transações financeiras** (a FK que era só-banco virou entity/DTO/UI) + **Relatório por Categoria** (consumo real do plano de contas). Ver [relatorios](relatorios.md) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |
@@ -36,7 +37,7 @@
 ## Decisões arquiteturais ativas
 
 - **Permissões reusam `accountPayableReceivable.*`** (origem: SPEC-20260609-1212, 2026-06-09) — evita criar módulo de permissão novo; categoria é parte do fluxo financeiro de títulos.
-- **FK em FinancialTransaction só no banco por ora** (origem: SPEC-20260609-1212, 2026-06-09) — a transação é read-only/gerada internamente; a categoria será copiada do título quando a geração for ajustada.
+- ~~**FK em FinancialTransaction só no banco por ora**~~ (origem: SPEC-20260609-1212; **superada por SPEC-20260611-1231, 2026-06-11**) — a FK foi ligada em entity/DTO/mapper e o form de transação ganhou o seletor de categoria.
 
 ## Alternativas consideradas e rejeitadas
 

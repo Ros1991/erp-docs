@@ -20,6 +20,7 @@
 | ID | Data | Commit | Título |
 |---|---|---|---|
 | SPEC-20260609-1334 | 2026-06-09 | `71bfe4b` | Onda 4: recorrência automática (gera próxima ocorrência), 1 tarefa ativa por empregado, editar hora manual, pausa geral |
+| SPEC-20260611-1231 | 2026-06-11 | — | Onda 7: gestão completa na edição (`TaskManagePanel`): funcionários com todas as ações, fotos (Base64 + galeria), comentários (endpoints novos); migração 032 (urls → text) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |
@@ -41,9 +42,14 @@ API em `api/task`: CRUD (`getAll`, `getPaged`, `GET {id}`, `create`, `PUT {id}`,
 - **Editar hora manual** — `PUT {taskId}/employee/{employeeId}/time` (start/end/clearStart/clearEnd), recomputa `ActualHours`.
 - **Pausa geral** — `POST {taskId}/global-pause` pausa todos os empregados (`EmAndamento`/`Pendente`) com motivo.
 
+**Gestão completa na edição (Onda 7, SPEC-20260611-1231):**
+- **Comentários** — `GET/POST api/task/{taskId}/comments` (canView) e `DELETE api/task/comment/{id}` (canEdit); autor vem do JWT; DTOs/mapper que existiam sem fiação foram ligados.
+- **`TaskManagePanel`** (dentro do `TaskForm` em edição): funcionários (atribuir/remover, iniciar respeitando 1-ativa, pausar c/ motivo, parar, finalizar, reabrir, editar hora, pausa geral), fotos (upload comprimido Base64 + galeria + lightbox + excluir) e comentários (listar/criar/excluir).
+- **Migração 032** — `task_image_url` e `task_comment_attachment_url` viraram `text` (Base64 não cabia em varchar 2048).
+
 Modelo rico: `Task` (título, descrição, `Priority`, recorrência via `FrequencyDays` + flags `AllowSunday..AllowSaturday`, `StartDate`/`EndDate`, `OverallStatus`, auto-relacionamentos `TaskIdParent` e `TaskIdBlocking`) → `TaskEmployee` (atribuição: `Status`, `EstimatedHours`/`ActualHours`, datas) → `TaskStatusHistory` (histórico de transições), `TaskPause` (pausas do cronômetro), `TaskImage` (anexos), `TaskComment` (comentários). A migration `022_add_task_and_timeclock_fields` ampliou os campos.
 
-> Última atualização: 2026-06-09 15:11 (SPEC-20260609-1334 — Onda 4)
+> Última atualização: 2026-06-11 13:05 (SPEC-20260611-1231 — Onda 7)
 
 ## Decisões arquiteturais ativas
 
