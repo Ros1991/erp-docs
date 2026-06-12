@@ -3,7 +3,7 @@
 > **GERADO AUTOMATICAMENTE.** Edição manual PROIBIDA.
 > Regenerado por `scripts/generate-index.sh` a cada push na `main`.
 >
-> Última regeneração: 2026-06-11 14:42 (commit `af11067`)
+> Última regeneração: 2026-06-11 17:41 (commit `8ae200d`)
 
 ---
 
