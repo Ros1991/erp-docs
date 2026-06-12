@@ -18,6 +18,7 @@
 | ID | Data | Commit | Título |
 |---|---|---|---|
 | SPEC-20260609-1516 | 2026-06-09 | `34f5246` | Onda 5: benefício percentual — a folha calcula `% × salário base` quando o benefício é marcado como percentual (aditivo, **default-off** preserva o cálculo existente) |
+| SPEC-20260612-1215 | 2026-06-12 | `9dd7de7`/`715020e` | Onda 10: ícone do expander dos funcionários corrigido (▾ aberto / ▸ fechado); **13º, férias e adiantamento de férias passam a respeitar o mês/ano de referência do empréstimo** (`GetPendingLoansByEmployeeAsync` recebe `payroll.PeriodEndDate` em todos os call sites) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |
@@ -35,7 +36,9 @@ API em `api/payroll` (a mais rica do sistema). Além do CRUD (`getAll`, `getPage
 
 Modelo: `Payroll` (período, totais bruto/descontos/líquido, `IsClosed`, **`Snapshot` JSONB**) → `PayrollEmployee` (por empregado: férias, dias, adiantamento de férias, totais) → `PayrollItem` (cada provento/desconto: `Type`, `Category`, `Amount`, `ReferenceId`, **`CalculationDetails` JSONB**, `CalculationBasis`). Puxa de [[empregados-contratos]] (contratos + encargos), [[emprestimos-adiantamentos]] (descontos) e usa parâmetros de [[empresas-multitenancy]] (dia de fechamento, horas semanais). Evoluída por várias migrations: `011` (worked units), `013` (INSS/FGTS), `014` (13º), `017` (campos de fechamento), `021` (impostos sobre adiantamento de férias).
 
-> Última atualização: 2026-06-08 20:15 (engenharia reversa inicial — sem SPEC associada)
+Descontos de empréstimo (todas as vias — mensal, 13º, férias, parcela adiantada de férias) só incluem empréstimos cujo **mês/ano de referência** (`LoanAdvance.StartDate`, sempre dia 1 — ver [[emprestimos-adiantamentos]]) seja `<= PeriodEndDate` da folha.
+
+> Última atualização: 2026-06-12 12:52 (SPEC-20260612-1215 — Onda 10)
 
 ## Decisões arquiteturais ativas
 

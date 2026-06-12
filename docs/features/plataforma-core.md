@@ -24,6 +24,7 @@
 | SPEC-20260609-1111 | 2026-06-09 | `780660e` | Onda 0: confirmação ao Sair (Header) + persistência do estado da sidebar (localStorage) |
 | SPEC-20260611-1249 | 2026-06-11 | — | Onda 8: **Dashboard com dados reais** (funcionários, tarefas em aberto, receitas/despesas do mês, ponto hoje, minhas tarefas — permission-guarded; fakes removidos) + Header/Dashboard saúdam com o **apelido do empregado** associado |
 | SPEC-20260611-1317 | 2026-06-11 | — | Onda 9: fix de layout — header com **`h-16` fixo** (o `pt-16` do MainLayout e o `top-16` da sidebar assumem 64px; o header com `py-4` estourava ~72px e cobria o topo da sidebar/conteúdo) |
+| SPEC-20260612-1215 | 2026-06-12 | `715020e` | Onda 10: sidebar **reorganizada** (Dashboard solto; grupos RH / Financeiro / Cadastros / Ponto / Tarefas / Relatórios; Configurações no fim; grupo "Pessoal" fundido em RH) e **auto-expand por rota removido** — o estado aberto/fechado dos grupos é só do usuário (localStorage) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |
@@ -63,6 +64,8 @@ Respostas usam o envelope **`BaseResponse<T>`** (`code`, `message`, `data`, `err
 - **Campos de auditoria em português** (2026-06-08 20:15) — `CriadoPor`, `CriadoEm`, `AtualizadoPor`, `AtualizadoEm` em quase toda entidade; `CriadoPor`/`AtualizadoPor` recebem o `currentUserId` propagado do controller.
 - **`Npgsql.EnableLegacyTimestampBehavior = true`** (2026-06-08 20:15) — setado em `Program.cs`; `DateTime` com `Kind=Unspecified` é tratado como UTC. Vários campos de data/timestamp são modelados como `string` no `ErpContext`.
 - **Pastas de camada começam com `-`** (2026-06-08 20:15) — `-1-Domain` etc. quebram glob/`find`; sempre cite caminhos com `./-1-Domain/...` e prefira as ferramentas de busca.
+- **`PagedRequest.IsAscending` é computado (sem setter)** (2026-06-12 12:52, SPEC-20260612-1215) — o model binding ignora `IsAscending` na query string; quem quer ordenar desc DEVE enviar `OrderDirection=desc` (a menos que o FilterDTO concreto declare um `IsAscending` próprio com setter, como o de Employee). Já mordeu na lista de empréstimos.
+- **Interceptor global trata QUALQUER 403 como perda de acesso à empresa** (2026-06-12 12:52, SPEC-20260612-1215) — `api.ts` limpa a empresa e redireciona p/ /select-company; uma tela que chama endpoint sem a permissão correspondente derruba a sessão da empresa. Guardar fetches com `hasPermission(...)`.
 
 ## Estado congelado (se houver)
 

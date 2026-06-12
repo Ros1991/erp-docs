@@ -16,6 +16,7 @@
 | ID | Data | Commit | Título |
 |---|---|---|---|
 | SPEC-20260611-1249 | 2026-06-11 | — | Onda 8: lista de usuários mostra o **apelido do empregado associado** (`CompanyUserOutputDTO.EmployeeNickname`, lookup por `UserId` no service) |
+| SPEC-20260612-1215 | 2026-06-12 | `9dd7de7`/`715020e` | Onda 10: criar usuário pela tela de funcionários **não apaga mais o form** em erro de duplicidade e **oferece associar o usuário existente** (busca via `POST api/employee/searchUserByData`) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |

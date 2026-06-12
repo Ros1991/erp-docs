@@ -23,6 +23,7 @@
 | SPEC-20260609-1248 | 2026-06-09 | `d9100bd` | Onda 2: vínculo de jornada (`work_schedule_id`) no contrato + seletor de jornada no ContractForm. Ver [jornada-trabalho](jornada-trabalho.md) |
 | SPEC-20260609-1516 | 2026-06-09 | `34f5246` | Onda 5: benefício do contrato como **percentual do salário** (`IsPercentage`/`Percentage`) + UI no BenefitDiscountList. Ver [folha-pagamento](folha-pagamento.md) |
 | SPEC-20260611-1249 | 2026-06-11 | — | Onda 8: campo **WhatsApp** no empregado (migração 033) + combo de gerente sem `-` órfão quando não há nome completo |
+| SPEC-20260612-1215 | 2026-06-12 | `9dd7de7`/`715020e` | Onda 10: **ordenação alfabética** de empregados no backend (`GetAllAsync` e default do `GetPagedAsync` por `Nickname ?? FullName` — todos os combos herdam) + **`POST api/employee/searchUserByData`** e fluxo de duplicidade no `CreateUserDialog` (mantém dados + oferece associação) |
 
 ### Planejadas (future/)
 | ID | Título | Motivo |
@@ -36,11 +37,11 @@
 
 ## Estado atual
 
-**Empregados** — `api/employee` (CRUD sob `employee.*`) + `GET me` (empregado do usuário logado) + um conjunto de endpoints para vincular empregado↔usuário: `searchUser`, `associateUser`, `createAndAssociateUser`, `disassociateUser` (todos sob `employee.canEdit`). `Employee` tem `CompanyId`, `UserId` (opcional), `EmployeeIdManager` (auto-relacionamento de hierarquia), dados pessoais (`FullName`, `Nickname`, `Email`, `Phone`, `Cpf`).
+**Empregados** — `api/employee` (CRUD sob `employee.*`) + `GET me` (empregado do usuário logado) + um conjunto de endpoints para vincular empregado↔usuário: `searchUser`, `searchUserByData` (Onda 10 — busca por dados digitados, p/ fluxo de duplicidade), `associateUser`, `createAndAssociateUser`, `disassociateUser` (todos sob `employee.canEdit`). `Employee` tem `CompanyId`, `UserId` (opcional), `EmployeeIdManager` (auto-relacionamento de hierarquia), dados pessoais (`FullName`, `Nickname`, `Email`, `Phone`, `Cpf`). Listagens vêm ordenadas por `Nickname ?? FullName` (Onda 10) — combos do front não precisam ordenar.
 
 **Contratos** — `api/contract` indexado por empregado (`employee/{employeeId}/all`, `employee/{employeeId}/active`, `GET {contractId}`, create, `PUT {contractId}`, `DELETE {contractId}`) — usa as permissões de `employee.*`. `Contract` tem `Type`, `Value`, flags de encargos (`IsPayroll`, `HasInss`, `HasIrrf`, `HasFgts`), `StartDate`/`EndDate`, `WeeklyHours`, `IsActive`. Benefícios/descontos recorrentes ficam em `ContractBenefitDiscount`; o rateio do custo do contrato em `ContractCostCenter` (ver [[centros-de-custo]]). É a base do cálculo de [[folha-pagamento]].
 
-> Última atualização: 2026-06-08 20:15 (engenharia reversa inicial — sem SPEC associada)
+> Última atualização: 2026-06-12 12:52 (SPEC-20260612-1215 — Onda 10)
 
 ## Decisões arquiteturais ativas
 
