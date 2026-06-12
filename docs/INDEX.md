@@ -3,7 +3,7 @@
 > **GERADO AUTOMATICAMENTE.** Edição manual PROIBIDA.
 > Regenerado por `scripts/generate-index.sh` a cada push na `main`.
 >
-> Última regeneração: 2026-06-12 15:54 (commit `475580b`)
+> Última regeneração: 2026-06-12 16:15 (commit `fb3e66a`)
 
 ---
 
@@ -161,6 +161,21 @@
     - erp-front/src/services/loanAdvanceService.ts
     - erp-front/src/pages/loan-advances/
 - → [features/emprestimos-adiantamentos.md](features/emprestimos-adiantamentos.md)
+
+### equipamentos
+
+- **Keywords:** equipamento, equipment, manutenção prevista, depreciação, placa, chassi, renavam, vida útil, trator, veículo, máquina
+- **Resumo:** Cadastro de equipamentos da empresa (tratores, veículos, máquinas, implementos) com dados de identificação, valor, foto, depreciação e manutenções previstas — portado do sistema antigo (telas Equipamentos.aspx).
+- **Arquivos principais:**
+    - erp-back/-1-Domain/Entities/equipment.cs
+    - erp-back/-1-Domain/Entities/equipmentMaintenance.cs
+    - erp-back/-4-WebApi/Controllers/EquipmentController.cs
+    - erp-back/-2-Application/Services/EquipmentService.cs
+    - erp-back/-3-Infrastructure/Repositories/EquipmentRepository.cs
+    - erp-back/-1-Domain/database/migrations/036_create_equipment.sql
+    - erp-front/src/services/equipmentService.ts
+    - erp-front/src/pages/equipment/
+- → [features/equipamentos.md](features/equipamentos.md)
 
 ### feriados
 
